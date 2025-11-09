@@ -40,3 +40,5 @@ Si no usas Node/npm, puedes abrir el proyecto en tu IDE y usar la integración d
 
 - El objetivo de esta versión es mostrar la propuesta visual y de flujo de la aplicación, no una plataforma totalmente funcional.
 - En la versión final: autenticación, seguridad, y controles para manejo de datos serán necesarios
+
+- El color que usamos en el logo es el : #0059e5
