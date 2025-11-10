@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HACKED NOW — Presentación</title>
+  <meta name="description" content="Presentación de HACKED NOW: web para exponer incidentes de ciberseguridad y resolverlos con la comunidad, expertos y un asistente IA. (Maqueta visual)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#06b6d4',
+            ink: '#0b1220',
+            paper: '#0b1220',
+            sugar: '#f7fafc'
+          },
+          fontFamily: { display: ['Space Grotesk','system-ui','sans-serif'] },
+          boxShadow: {
+            soft: '0 8px 30px rgba(2, 6, 23, 0.08)',
+            glow: '0 8px 40px rgba(34, 211, 238, 0.35)'
+          },
+          borderRadius: { xl: '1rem', '2xl': '1.25rem' }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined{ font-variation-settings:'FILL' 0,'wght' 600,'GRAD' 0,'opsz' 24; }
+    .glass { background: color-mix(in oklab, white 65%, transparent); }
+    .dark .glass { background: color-mix(in oklab, black 65%, transparent); }
+    .hero-grad {
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(34,211,238,0.25), transparent 60%),
+                  radial-gradient(900px 600px at 100% 10%, rgba(56,189,248,0.18), transparent 60%);
+    }
+    @media (prefers-reduced-motion:no-preference){
+      .float { animation: float 10s ease-in-out infinite; }
+      @keyframes float { 0%{transform:translateY(0)} 50%{transform:translateY(-8px)} 100%{transform:translateY(0)} }
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-paper text-slate-900 dark:text-slate-100 font-display">
+  <div class="pointer-events-none fixed inset-0 -z-10 hero-grad opacity-70"></div>
+
+  <header class="sticky top-0 z-50 backdrop-blur border-b border-white/40 dark:border-white/5 bg-white/60 dark:bg-black/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary">security</span>
+        <span class="font-bold tracking-tight text-lg sm:text-xl">HACKED NOW</span>
+        <span class="ml-2 text-xs px-2 py-0.5 rounded-full border border-slate-300/60 dark:border-white/10 text-slate-500 dark:text-slate-300">Maqueta</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-1 text-sm">
+        <a href="#features" class="px-3 py-2 rounded-lg hover:bg-slate-900/5 dark:hover:bg-white/10">Funcionalidades</a>
+        <a href="#how" class="px-3 py-2 rounded-lg hover:bg-slate-900/5 dark:hover:bg-white/10">Cómo funciona</a>
+        <a href="#pricing" class="px-3 py-2 rounded-lg hover:bg-slate-900/5 dark:hover:bg-white/10">Planes</a>
+        <a href="#faq" class="px-3 py-2 rounded-lg hover:bg-slate-900/5 dark:hover:bg-white/10">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="btn-theme" class="px-3 py-2 rounded-lg hover:bg-slate-900/5 dark:hover:bg-white/10" title="Tema">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+        <a href="#cta" class="hidden sm:inline-flex px-3 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary/90">Empezar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid lg:grid-cols-2 gap-10 items-center">
+        <div class="space-y-5">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+            Resuelve incidentes de ciberseguridad con comunidad, expertos e IA.
+          </h1>
+          <p class="text-lg text-slate-600 dark:text-slate-300">
+            Presenta tu caso, recibe respuestas verificadas y guía paso a paso. Esta es una <b>presentación visual</b> de lo que hará la plataforma.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#features" class="px-5 py-3 rounded-xl bg-primary text-white font-semibold shadow-glow hover:bg-primary/90">Ver funcionalidades</a>
+            <a href="#preview" class="px-5 py-3 rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-900/5 dark:hover:bg-white/10">Maqueta de interfaz</a>
+          </div>
+          <div class="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400">
+            <span class="material-symbols-outlined">verified_user</span> Orientado a <b class="ml-1">defensa y recuperación</b>. Sin instrucciones ofensivas.
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-x-8 -inset-y-6 blur-3xl opacity-50 rounded-[2rem] bg-gradient-to-br from-cyan-400/30 to-sky-300/30"></div>
+          <div class="relative glass rounded-2xl border border-white/50 dark:border-white/10 shadow-soft p-6">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2">
+                <span class="size-3 rounded-full bg-red-400/80"></span>
+                <span class="size-3 rounded-full bg-amber-400/80"></span>
+                <span class="size-3 rounded-full bg-emerald-400/80"></span>
+              </div>
+              <span class="text-xs text-slate-500 dark:text-slate-400">Vista previa</span>
+            </div>
+            <div class="grid gap-3">
+              <div class="rounded-xl h-40 bg-gradient-to-br from-slate-100 to-white dark:from-slate-800 dark:to-slate-900 border border-slate-200/60 dark:border-white/10 flex items-center justify-center">
+                <div class="text-center px-6">
+                  <div class="text-sm text-slate-500 dark:text-slate-400">Hero: titular + botones</div>
+                  <div class="mt-1 text-xs text-slate-400 dark:text-slate-500">Maqueta. Sin funcionalidad.</div>
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-3 gap-3">
+                <div class="rounded-xl p-4 border border-slate-200/70 dark:border-white/10 bg-white/60 dark:bg-white/5">
+                  <div class="material-symbols-outlined text-primary">quiz</div>
+                  <div class="mt-2 font-semibold">Preguntas</div>
+                  <div class="text-sm text-slate-600 dark:text-slate-300">Cuestionario de ciberataques.</div>
+                </div>
+                <div class="rounded-xl p-4 border border-slate-200/70 dark:border-white/10 bg-white/60 dark:bg-white/5">
+                  <div class="material-symbols-outlined text-primary">post_add</div>
+                  <div class="mt-2 font-semibold">Exponer caso</div>
+                  <div class="text-sm text-slate-600 dark:text-slate-300">Publicación guiada.</div>
+                </div>
+                <div class="rounded-xl p-4 border border-slate-200/70 dark:border-white/10 bg-white/60 dark:bg-white/5">
+                  <div class="material-symbols-outlined text-primary">workspace_premium</div>
+                  <div class="mt-2 font-semibold">IA & Expertos</div>
+                  <div class="text-sm text-slate-600 dark:text-slate-300">Opciones premium (maqueta).</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Todo lo que ofrece la plataforma</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">Vista de alto nivel. Sin backend. Sin login. Solo presentación.</p>
+        </div>
+        <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+            <div class="material-symbols-outlined text-primary">quiz</div>
+            <h3 class="mt-2 font-semibold">Preguntas sobre ciberataques</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Cuestionario inicial para clasificar el incidente.</p>
+          </div>
+          <div class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+            <div class="material-symbols-outlined text-primary">post_add</div>
+            <h3 class="mt-2 font-semibold">Exponer tu caso</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Describe el problema con pasos y evidencias.</p>
+          </div>
+          <div class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+            <div class="material-symbols-outlined text-primary">forum</div>
+            <h3 class="mt-2 font-semibold">Respuestas de la web</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Soluciones estandarizadas y guías.</p>
+          </div>
+          <div class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+            <div class="material-symbols-outlined text-primary">group</div>
+            <h3 class="mt-2 font-semibold">Respuestas de usuarios</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Participación comunitaria con votos.</p>
+          </div>
+          <div class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+            <div class="material-symbols-outlined text-amber-500">workspace_premium</div>
+            <h3 class="mt-2 font-semibold">Respuestas de expertos</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Soporte priorizado (premium).</p>
+          </div>
+          <div class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+            <div class="material-symbols-outlined text-primary">link</div>
+            <h3 class="mt-2 font-semibold">Links a herramientas</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">HIBP, VirusTotal, gestores de contraseñas…</p>
+          </div>
+          <div class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+            <div class="material-symbols-outlined text-primary">smart_toy</div>
+            <h3 class="mt-2 font-semibold">Asistente IA</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Guía defensiva paso a paso (premium).</p>
+          </div>
+          <div class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+            <div class="material-symbols-outlined text-primary">newspaper</div>
+            <h3 class="mt-2 font-semibold">Noticias de filtraciones</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Alertas que podrían afectarte.</p>
+          </div>
+          <div class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+            <div class="material-symbols-outlined text-primary">handshake</div>
+            <h3 class="mt-2 font-semibold">Programa de expertos</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Conviértete en experto y gana comisión.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="py-16 sm:py-24 border-t border-white/60 dark:border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Cómo funciona</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">Proceso en 4 pasos. Visual y claro.</p>
+        </div>
+        <ol class="mt-10 grid lg:grid-cols-4 gap-6">
+          <li class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+            <div class="text-xs text-slate-500 dark:text-slate-400 mb-1">Paso 1</div>
+            <div class="font-semibold">Expon tu caso</div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Indica servicio afectado, fecha y qué probaste.</p>
+          </li>
+          <li class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+            <div class="text-xs text-slate-500 dark:text-slate-400 mb-1">Paso 2</div>
+            <div class="font-semibold">Diagnóstico guiado</div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Preguntas claves para clasificar el incidente.</p>
+          </li>
+          <li class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+            <div class="text-xs text-slate-500 dark:text-slate-400 mb-1">Paso 3</div>
+            <div class="font-semibold">Elige ayuda</div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Respuestas de la web, usuarios o expertos (premium).</p>
+          </li>
+          <li class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+            <div class="text-xs text-slate-500 dark:text-slate-400 mb-1">Paso 4</div>
+            <div class="font-semibold">Resuelve y aprende</div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Guías, checklist y prevención futura.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="pricing" class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Planes</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">Maqueta — precios y pagos son ilustrativos.</p>
+        </div>
+        <div class="mt-10 grid md:grid-cols-2 gap-6">
+          <div class="rounded-2xl p-6 border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-white/5">
+            <div class="text-sm font-semibold text-primary">Gratis</div>
+            <div class="mt-2 text-3xl font-bold tracking-tight">0€</div>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-emerald-500">check_circle</span> Exponer caso</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-emerald-500">check_circle</span> Guías base y respuestas de usuarios</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-emerald-500">check_circle</span> Links a herramientas</li>
+            </ul>
+            <a href="#cta" class="mt-5 inline-flex px-4 py-2 rounded-lg border border-slate-200 dark:border-white/10 hover:bg-slate-900/5 dark:hover:bg-white/10">Elegir</a>
+          </div>
+          <div class="rounded-2xl p-6 border border-slate-200 dark:border-white/10 bg-gradient-to-br from-cyan-100/60 to-sky-100/60 dark:from-cyan-400/10 dark:to-sky-400/10 shadow-soft">
+            <div class="text-sm font-semibold text-primary">Premium</div>
+            <div class="mt-2 text-3xl font-bold tracking-tight">—</div>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-emerald-500">check_circle</span> Respuestas de expertos</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-emerald-500">check_circle</span> Asistente IA defensivo</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-emerald-500">check_circle</span> Alertas de filtraciones</li>
+            </ul>
+            <a href="#cta" class="mt-5 inline-flex px-4 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary/90">Elegir</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24 border-t border-white/60 dark:border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Herramientas clave</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">Referencias que todo usuario debería conocer.</p>
+        </div>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <span class="px-4 py-2 rounded-full border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 text-sm">Have I Been Pwned</span>
+          <span class="px-4 py-2 rounded-full border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 text-sm">VirusTotal</span>
+          <span class="px-4 py-2 rounded-full border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 text-sm">Gestor de contraseñas</span>
+          <span class="px-4 py-2 rounded-full border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 text-sm">Panel de seguridad Google/Microsoft/Apple</span>
+          <span class="px-4 py-2 rounded-full border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 text-sm">URLscan</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+        <div class="space-y-3">
+          <h3 class="text-3xl sm:text-4xl font-bold tracking-tight">Programa de expertos</h3>
+          <p class="text-slate-600 dark:text-slate-300">Responde casos verificados y gana comisión cuando tu respuesta se marque como solución.</p>
+          <ul class="mt-2 space-y-2 text-sm">
+            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary">verified</span> Verificación y distintivo público</li>
+            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary">payments</span> Comisión por solución aceptada</li>
+            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary">military_tech</span> Ranking y reputación</li>
+          </ul>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-4 blur-3xl opacity-40 rounded-[2rem] bg-gradient-to-br from-emerald-400/30 to-cyan-400/30"></div>
+          <div class="relative glass rounded-2xl border border-white/50 dark:border-white/10 shadow-soft p-6">
+            <div class="text-sm text-slate-500 dark:text-slate-400">Tarjeta de experto (maqueta)</div>
+            <div class="mt-3 grid sm:grid-cols-2 gap-3">
+              <div class="rounded-xl p-4 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+                <div class="text-xs text-slate-500 dark:text-slate-400">Nombre</div>
+                <div class="font-semibold">A. Serrano</div>
+                <div class="text-xs mt-1 text-emerald-600 dark:text-emerald-300">Experto verificado</div>
+              </div>
+              <div class="rounded-xl p-4 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+                <div class="text-xs text-slate-500 dark:text-slate-400">Especialidad</div>
+                <div class="font-semibold">Robo de cuentas</div>
+                <div class="text-xs mt-1 text-slate-500 dark:text-slate-400">+124 soluciones</div>
+              </div>
+            </div>
+            <div class="mt-3 rounded-xl p-4 border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5">
+              <div class="text-xs text-slate-500 dark:text-slate-400">Comisión total (maqueta)</div>
+              <div class="text-2xl font-bold">€ 2.480</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="preview" class="py-16 sm:py-24 border-t border-white/60 dark:border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Maqueta de interfaz</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">Componentes visuales a modo de ejemplo.</p>
+        </div>
+        <div class="mt-10 grid lg:grid-cols-2 gap-6">
+          <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-5 shadow-soft">
+            <div class="text-sm text-slate-500 dark:text-slate-400 mb-3">Caso (tarjeta)</div>
+            <div class="rounded-xl border border-slate-200 dark:border-white/10 p-4">
+              <div class="flex items-center justify-between text-xs">
+                <span class="px-2 py-1 rounded-full border border-slate-200 dark:border-white/10">Robo de cuenta</span>
+                <span class="text-emerald-600 dark:text-emerald-300">abierto</span>
+              </div>
+              <div class="mt-2 font-semibold">No puedo acceder a mi Instagram</div>
+              <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Me cambiaron el correo y el número. Tengo acceso al correo original.</div>
+              <div class="mt-3 text-xs text-slate-500 dark:text-slate-400">12 respuestas · ✅ solución</div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-5 shadow-soft">
+            <div class="text-sm text-slate-500 dark:text-slate-400 mb-3">Asistente IA (burbuja)</div>
+            <div class="rounded-xl border border-slate-200 dark:border-white/10 p-4 space-y-2">
+              <div class="flex justify-start">
+                <div class="max-w-[80%] px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm">
+                  Describe lo ocurrido. Solo daré pasos defensivos.
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <div class="max-w-[80%] px-3 py-2 rounded-xl bg-cyan-50 border border-cyan-200 dark:bg-cyan-400/10 dark:border-cyan-400/20 text-sm">
+                  Creo que caí en un phishing de Instagram y di mi contraseña.
+                </div>
+              </div>
+              <div class="flex justify-start">
+                <div class="max-w-[80%] px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm">
+                  Cambia la contraseña desde un dispositivo aún conectado, remueve sesiones activas y habilita 2FA (TOTP). Revisa reglas de reenvío en tu correo.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Lo que dirían los usuarios</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">Testimonios ficticios para la demo.</p>
+        </div>
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+          <figure class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-white/5">
+            <blockquote class="text-sm text-slate-700 dark:text-slate-200">“Entendí rápido qué hacer y recuperé mi cuenta sin pánico.”</blockquote>
+            <figcaption class="mt-3 text-xs text-slate-500 dark:text-slate-400">Clara M.</figcaption>
+          </figure>
+          <figure class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-white/5">
+            <blockquote class="text-sm text-slate-700 dark:text-slate-200">“El asistente me guió paso a paso con medidas seguras.”</blockquote>
+            <figcaption class="mt-3 text-xs text-slate-500 dark:text-slate-400">Diego R.</figcaption>
+          </figure>
+          <figure class="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-white/5">
+            <blockquote class="text-sm text-slate-700 dark:text-slate-200">“Como experto, la reputación y comisión me motivan a ayudar.”</blockquote>
+            <figcaption class="mt-3 text-xs text-slate-500 dark:text-slate-400">A. Serrano</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-16 sm:py-24 border-t border-white/60 dark:border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Preguntas frecuentes</h2>
+          <div class="mt-6 space-y-4">
+            <details class="rounded-xl p-4 border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-white/5">
+              <summary class="cursor-pointer font-semibold">¿Esto es funcional?</summary>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">No. Es una maqueta visual para presentar el producto.</p>
+            </details>
+            <details class="rounded-xl p-4 border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-white/5">
+              <summary class="cursor-pointer font-semibold">¿Cómo sería la parte premium?</summary>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Incluiría respuestas priorizadas de expertos, IA defensiva y alertas personalizadas.</p>
+            </details>
+            <details class="rounded-xl p-4 border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-white/5">
+              <summary class="cursor-pointer font-semibold">¿Puedo ser experto?</summary>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Sí, con verificación. Hay comisión por soluciones aceptadas.</p>
+            </details>
+          </div>
+        </div>
+        <div id="cta" class="rounded-2xl p-6 border border-slate-200 dark:border-white/10 bg-gradient-to-br from-cyan-100/60 to-sky-100/60 dark:from-cyan-400/10 dark:to-sky-400/10 shadow-soft">
+          <div class="text-sm text-primary font-semibold">Siguiente paso</div>
+          <h3 class="mt-1 text-2xl font-bold">Presenta tu proyecto con esta maqueta</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300 text-sm">Úsala en local. Puedes editar textos y secciones a tu gusto.</p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <a href="#features" class="px-4 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary/90">Ver funcionalidades</a>
+            <a href="#preview" class="px-4 py-2 rounded-lg border border-slate-200 dark:border-white/10 hover:bg-slate-900/5 dark:hover:bg-white/10">Ver maqueta UI</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/60 dark:border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="text-xs text-slate-500 dark:text-slate-400">© 2025 HACKED NOW — Presentación (sin funcionalidad)</div>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="#features" class="hover:text-primary">Funcionalidades</a>
+        <a href="#how" class="hover:text-primary">Cómo funciona</a>
+        <a href="#pricing" class="hover:text-primary">Planes</a>
+        <a href="#faq" class="hover:text-primary">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const saved = localStorage.getItem('hn_theme');
+    if(saved === 'dark'){ root.classList.add('dark'); }
+    document.getElementById('btn-theme').addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('hn_theme', root.classList.contains('dark') ? 'dark':'light');
+    });
+  </script>
+</body>
+</html>
