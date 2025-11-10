@@ -7,6 +7,7 @@ Un proyecto de presentación para la asignatura *Proyectos 3* — Web introducto
 - Javier Pascual — Project Manager
 - Alejandro Mamán — Scrum Master
 - Enrique Hedo
+- Alejandro Montero
 - Juan Sotos
 - Ivan Aranda
 - Guillermo Perez
